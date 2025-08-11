@@ -1,0 +1,377 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import Button from '@/components/Button.astro';
+import '@/styles/global.css';
+---
+
+<BaseLayout title="Integrations - NexWave AI Automation Platform" description="Connect NexWave with 500+ popular tools and services. Seamless integrations with CRM, communication, storage, and business tools.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl sm:text-6xl font-display font-bold text-secondary-900 mb-6 animate-on-scroll">
+          Connect with
+          <span class="text-gradient">500+ Tools</span>
+        </h1>
+        <p class="text-xl text-secondary-600 mb-8 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+          Integrate NexWave with your favorite business tools and services. Build powerful workflows that span your entire tech stack.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-on-scroll">
+          <Button variant="primary" size="lg" href="/signup">
+            Start Connecting
+          </Button>
+          <Button variant="secondary" size="lg" href="/api">
+            View API Docs
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Integrations -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-display font-bold text-secondary-900 mb-4 animate-on-scroll">
+          Most Popular Integrations
+        </h2>
+        <p class="text-xl text-secondary-600 max-w-2xl mx-auto animate-on-scroll">
+          Connect with the tools your team already uses and loves
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-16">
+        <!-- Integration Cards -->
+        <div class="card p-6 text-center hover:shadow-lg transition-shadow duration-200 animate-on-scroll">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">S</span>
+          </div>
+          <h3 class="font-semibold text-secondary-900 mb-2">Slack</h3>
+          <p class="text-xs text-secondary-600">Team Communication</p>
+        </div>
+        
+        <div class="card p-6 text-center hover:shadow-lg transition-shadow duration-200 animate-on-scroll">
+          <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">G</span>
+          </div>
+          <h3 class="font-semibold text-secondary-900 mb-2">Gmail</h3>
+          <p class="text-xs text-secondary-600">Email</p>
+        </div>
+        
+        <div class="card p-6 text-center hover:shadow-lg transition-shadow duration-200 animate-on-scroll">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-700 to-blue-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">SF</span>
+          </div>
+          <h3 class="font-semibold text-secondary-900 mb-2">Salesforce</h3>
+          <p class="text-xs text-secondary-600">CRM</p>
+        </div>
+        
+        <div class="card p-6 text-center hover:shadow-lg transition-shadow duration-200 animate-on-scroll">
+          <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">H</span>
+          </div>
+          <h3 class="font-semibold text-secondary-900 mb-2">HubSpot</h3>
+          <p class="text-xs text-secondary-600">Marketing</p>
+        </div>
+        
+        <div class="card p-6 text-center hover:shadow-lg transition-shadow duration-200 animate-on-scroll">
+          <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">T</span>
+          </div>
+          <h3 class="font-semibold text-secondary-900 mb-2">Trello</h3>
+          <p class="text-xs text-secondary-600">Project Management</p>
+        </div>
+        
+        <div class="card p-6 text-center hover:shadow-lg transition-shadow duration-200 animate-on-scroll">
+          <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">S</span>
+          </div>
+          <h3 class="font-semibold text-secondary-900 mb-2">Shopify</h3>
+          <p class="text-xs text-secondary-600">E-commerce</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Categories -->
+  <section class="section-padding bg-secondary-50">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-display font-bold text-secondary-900 mb-4 animate-on-scroll">
+          Browse by Category
+        </h2>
+        <p class="text-xl text-secondary-600 animate-on-scroll">
+          Find integrations for every aspect of your business
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- CRM & Sales -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-secondary-900 mb-4">CRM & Sales</h3>
+          <p class="text-secondary-600 mb-6 leading-relaxed">
+            Connect with leading CRM platforms to sync contacts, deals, and sales data automatically.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Salesforce</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">HubSpot</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Pipedrive</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Zoho CRM</span>
+          </div>
+          <p class="text-sm text-secondary-500">25+ integrations available</p>
+        </div>
+
+        <!-- Communication -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-secondary-900 mb-4">Communication</h3>
+          <p class="text-secondary-600 mb-6 leading-relaxed">
+            Send notifications, messages, and updates through your team's preferred communication channels.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Slack</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Teams</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Discord</span>
+            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Gmail</span>
+          </div>
+          <p class="text-sm text-secondary-500">35+ integrations available</p>
+        </div>
+
+        <!-- Cloud Storage -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-secondary-900 mb-4">Cloud Storage</h3>
+          <p class="text-secondary-600 mb-6 leading-relaxed">
+            Automatically organize, backup, and sync files across your favorite cloud storage platforms.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Google Drive</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Dropbox</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">OneDrive</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">Box</span>
+          </div>
+          <p class="text-sm text-secondary-500">20+ integrations available</p>
+        </div>
+
+        <!-- Marketing -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-secondary-900 mb-4">Marketing</h3>
+          <p class="text-secondary-600 mb-6 leading-relaxed">
+            Automate marketing campaigns, track performance, and nurture leads with marketing tools.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Mailchimp</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Constant Contact</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Campaign Monitor</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">ConvertKit</span>
+          </div>
+          <p class="text-sm text-secondary-500">30+ integrations available</p>
+        </div>
+
+        <!-- Project Management -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-secondary-900 mb-4">Project Management</h3>
+          <p class="text-secondary-600 mb-6 leading-relaxed">
+            Sync tasks, projects, and team collaboration across popular project management platforms.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Asana</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Trello</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Monday.com</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">Jira</span>
+          </div>
+          <p class="text-sm text-secondary-500">40+ integrations available</p>
+        </div>
+
+        <!-- E-commerce -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-secondary-900 mb-4">E-commerce</h3>
+          <p class="text-secondary-600 mb-6 leading-relaxed">
+            Automate order processing, inventory management, and customer communications for online stores.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Shopify</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">WooCommerce</span>
+            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">BigCommerce</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Magento</span>
+          </div>
+          <p class="text-sm text-secondary-500">25+ integrations available</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Integrations -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-on-scroll">
+          <h2 class="text-4xl font-display font-bold text-secondary-900 mb-6">
+            Need a Custom Integration?
+          </h2>
+          <p class="text-xl text-secondary-600 mb-8 leading-relaxed">
+            Don't see the tool you need? Our team can build custom integrations for your specific requirements. We support REST APIs, webhooks, and direct database connections.
+          </p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-secondary-700">Custom API integrations</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-secondary-700">Database connections</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-secondary-700">Legacy system integration</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-secondary-700">Dedicated support team</span>
+            </div>
+          </div>
+          
+          <Button variant="primary" href="/contact?subject=custom-integration">
+            Request Custom Integration
+          </Button>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="card p-8 bg-gradient-to-br from-primary-50 to-accent-50 border-primary-200">
+            <h3 class="text-2xl font-bold text-secondary-900 mb-6">Integration Process</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                <div>
+                  <h4 class="font-semibold text-secondary-900 mb-2">Requirements Analysis</h4>
+                  <p class="text-secondary-600 text-sm">We analyze your needs and technical requirements for the integration.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                <div>
+                  <h4 class="font-semibold text-secondary-900 mb-2">Development & Testing</h4>
+                  <p class="text-secondary-600 text-sm">Our team builds and thoroughly tests the custom integration.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+                <div>
+                  <h4 class="font-semibold text-secondary-900 mb-2">Deployment & Support</h4>
+                  <p class="text-secondary-600 text-sm">We deploy the integration and provide ongoing support and maintenance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Stats -->
+  <section class="section-padding bg-gradient-to-r from-primary-600 to-accent-600">
+    <div class="container-custom">
+      <div class="text-center text-white">
+        <h2 class="text-4xl font-display font-bold mb-12 animate-on-scroll">
+          Trusted Integration Platform
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="animate-on-scroll">
+            <div class="text-4xl font-bold mb-2">500+</div>
+            <div class="text-primary-100">Available Integrations</div>
+          </div>
+          <div class="animate-on-scroll">
+            <div class="text-4xl font-bold mb-2">99.9%</div>
+            <div class="text-primary-100">Integration Uptime</div>
+          </div>
+          <div class="animate-on-scroll">
+            <div class="text-4xl font-bold mb-2">10M+</div>
+            <div class="text-primary-100">API Calls per Month</div>
+          </div>
+          <div class="animate-on-scroll">
+            <div class="text-4xl font-bold mb-2">24/7</div>
+            <div class="text-primary-100">Support & Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-white">
+    <div class="container-custom text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-display font-bold text-secondary-900 mb-6 animate-on-scroll">
+          Ready to Connect Your Tools?
+        </h2>
+        <p class="text-xl text-secondary-600 mb-8 animate-on-scroll">
+          Start building powerful workflows with your favorite tools. Set up your first integration in minutes.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-on-scroll">
+          <Button variant="primary" size="lg" href="/signup">
+            Start Free Trial
+          </Button>
+          <Button variant="ghost" size="lg" href="/api">
+            Explore API
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,544 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import Button from '@/components/Button.astro';
+import '@/styles/global.css';
+---
+
+<BaseLayout title="API Documentation - NexWave Developer Platform" description="Complete API documentation for NexWave automation platform. REST API endpoints, authentication, SDKs, and code examples.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl sm:text-6xl font-display font-bold text-secondary-900 mb-6 animate-on-scroll">
+          Developer-First
+          <span class="text-gradient">API Platform</span>
+        </h1>
+        <p class="text-xl text-secondary-600 mb-8 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+          Build powerful integrations with NexWave's comprehensive REST API. Complete documentation, SDKs, and developer tools to get you started quickly.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-on-scroll">
+          <Button variant="primary" size="lg" href="#get-started">
+            Get API Key
+          </Button>
+          <Button variant="secondary" size="lg" href="#endpoints">
+            Browse Endpoints
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start -->
+  <section class="section-padding bg-white" id="get-started">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-display font-bold text-secondary-900 mb-4 animate-on-scroll">
+          Get Started in Minutes
+        </h2>
+        <p class="text-xl text-secondary-600 animate-on-scroll">
+          Follow these simple steps to start using the NexWave API
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <span class="text-white font-bold text-2xl">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-secondary-900 mb-4">Get Your API Key</h3>
+          <p class="text-secondary-600 leading-relaxed">
+            Sign up for a free account and generate your API key from the developer dashboard.
+          </p>
+        </div>
+        
+        <div class="text-center animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <span class="text-white font-bold text-2xl">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-secondary-900 mb-4">Make Your First Call</h3>
+          <p class="text-secondary-600 leading-relaxed">
+            Use our REST API to create workflows, manage integrations, and automate tasks.
+          </p>
+        </div>
+        
+        <div class="text-center animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <span class="text-white font-bold text-2xl">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-secondary-900 mb-4">Build & Deploy</h3>
+          <p class="text-secondary-600 leading-relaxed">
+            Integrate NexWave into your applications and deploy powerful automation workflows.
+          </p>
+        </div>
+      </div>
+
+      <!-- Code Example -->
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-secondary-900 mb-6 text-center animate-on-scroll">Quick Example</h3>
+        <div class="card p-0 overflow-hidden animate-on-scroll">
+          <div class="bg-secondary-800 text-white p-4 flex items-center justify-between">
+            <span class="text-sm font-medium">Create a new workflow</span>
+            <div class="flex space-x-2">
+              <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+          </div>
+          <div class="bg-secondary-900 text-green-400 p-6 font-mono text-sm overflow-x-auto">
+<pre><code>curl -X POST https://api.nexwave.com/v1/workflows \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '&lbrace;
+    "name": "Welcome Email Automation",
+    "trigger": &lbrace;
+      "type": "webhook",
+      "event": "user_signup"
+    &rbrace;,
+    "actions": [
+      &lbrace;
+        "type": "send_email",
+        "template": "welcome_template",
+        "delay": 0
+      &rbrace;
+    ]
+  &rbrace;'</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Authentication -->
+  <section class="section-padding bg-secondary-50">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-on-scroll">
+          <h2 class="text-4xl font-display font-bold text-secondary-900 mb-6">
+            Secure Authentication
+          </h2>
+          <p class="text-xl text-secondary-600 mb-8 leading-relaxed">
+            NexWave API uses Bearer token authentication for secure access. All requests must include your API key in the Authorization header.
+          </p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-secondary-900">API Key Authentication</h4>
+                <p class="text-secondary-600 text-sm">Simple and secure Bearer token authentication</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-secondary-900">Rate Limiting</h4>
+                <p class="text-secondary-600 text-sm">Generous rate limits with clear error responses</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-secondary-900">Scoped Permissions</h4>
+                <p class="text-secondary-600 text-sm">Fine-grained access control for enhanced security</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="card p-0 overflow-hidden">
+            <div class="bg-secondary-800 text-white p-4">
+              <span class="text-sm font-medium">Authentication Example</span>
+            </div>
+            <div class="bg-secondary-900 text-green-400 p-6 font-mono text-sm">
+<pre><code># Include your API key in every request
+Authorization: Bearer nw_live_1234567890abcdef
+
+# Example request
+GET https://api.nexwave.com/v1/workflows
+Authorization: Bearer nw_live_1234567890abcdef
+Content-Type: application/json</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Endpoints -->
+  <section class="section-padding bg-white" id="endpoints">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-display font-bold text-secondary-900 mb-4 animate-on-scroll">
+          API Endpoints
+        </h2>
+        <p class="text-xl text-secondary-600 animate-on-scroll">
+          Comprehensive REST API for all NexWave functionality
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Workflows -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-secondary-900">Workflows</h3>
+          </div>
+          <p class="text-secondary-600 mb-6">Create, manage, and execute automation workflows</p>
+          
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">GET</span>
+                <code class="text-secondary-700">/workflows</code>
+              </div>
+              <span class="text-secondary-500">List workflows</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">POST</span>
+                <code class="text-secondary-700">/workflows</code>
+              </div>
+              <span class="text-secondary-500">Create workflow</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded">PUT</span>
+                <code class="text-secondary-700">/workflows/&lbrace;id&rbrace;</code>
+              </div>
+              <span class="text-secondary-500">Update workflow</span>
+            </div>
+            <div class="flex items-center justify-between py-2">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded">DEL</span>
+                <code class="text-secondary-700">/workflows/&lbrace;id&rbrace;</code>
+              </div>
+              <span class="text-secondary-500">Delete workflow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Executions -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-secondary-900">Executions</h3>
+          </div>
+          <p class="text-secondary-600 mb-6">Monitor and manage workflow executions</p>
+          
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">GET</span>
+                <code class="text-secondary-700">/executions</code>
+              </div>
+              <span class="text-secondary-500">List executions</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">GET</span>
+                <code class="text-secondary-700">/executions/&lbrace;id&rbrace;</code>
+              </div>
+              <span class="text-secondary-500">Get execution</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">POST</span>
+                <code class="text-secondary-700">/executions</code>
+              </div>
+              <span class="text-secondary-500">Trigger execution</span>
+            </div>
+            <div class="flex items-center justify-between py-2">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded">POST</span>
+                <code class="text-secondary-700">/executions/&lbrace;id&rbrace;/stop</code>
+              </div>
+              <span class="text-secondary-500">Stop execution</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrations -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-secondary-900">Integrations</h3>
+          </div>
+          <p class="text-secondary-600 mb-6">Manage third-party integrations and connections</p>
+          
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">GET</span>
+                <code class="text-secondary-700">/integrations</code>
+              </div>
+              <span class="text-secondary-500">List integrations</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">POST</span>
+                <code class="text-secondary-700">/integrations</code>
+              </div>
+              <span class="text-secondary-500">Create integration</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">GET</span>
+                <code class="text-secondary-700">/integrations/&lbrace;id&rbrace;/test</code>
+              </div>
+              <span class="text-secondary-500">Test connection</span>
+            </div>
+            <div class="flex items-center justify-between py-2">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded">DEL</span>
+                <code class="text-secondary-700">/integrations/&lbrace;id&rbrace;</code>
+              </div>
+              <span class="text-secondary-500">Delete integration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Webhooks -->
+        <div class="card p-8 animate-on-scroll">
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-secondary-900">Webhooks</h3>
+          </div>
+          <p class="text-secondary-600 mb-6">Configure webhook triggers and event handling</p>
+          
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">GET</span>
+                <code class="text-secondary-700">/webhooks</code>
+              </div>
+              <span class="text-secondary-500">List webhooks</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">POST</span>
+                <code class="text-secondary-700">/webhooks</code>
+              </div>
+              <span class="text-secondary-500">Create webhook</span>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-secondary-100">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">POST</span>
+                <code class="text-secondary-700">/webhooks/&lbrace;id&rbrace;/test</code>
+              </div>
+              <span class="text-secondary-500">Test webhook</span>
+            </div>
+            <div class="flex items-center justify-between py-2">
+              <div class="flex items-center space-x-3">
+                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded">PUT</span>
+                <code class="text-secondary-700">/webhooks/&lbrace;id&rbrace;</code>
+              </div>
+              <span class="text-secondary-500">Update webhook</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SDKs and Libraries -->
+  <section class="section-padding bg-secondary-50">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-display font-bold text-secondary-900 mb-4 animate-on-scroll">
+          SDKs & Libraries
+        </h2>
+        <p class="text-xl text-secondary-600 animate-on-scroll">
+          Official SDKs and libraries for popular programming languages
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card p-6 text-center animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">JS</span>
+          </div>
+          <h3 class="font-bold text-secondary-900 mb-2">JavaScript</h3>
+          <p class="text-secondary-600 text-sm mb-4">Node.js and browser support</p>
+          <Button variant="ghost" size="sm" href="https://npmjs.com/package/nexwave">
+            npm install
+          </Button>
+        </div>
+        
+        <div class="card p-6 text-center animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">PY</span>
+          </div>
+          <h3 class="font-bold text-secondary-900 mb-2">Python</h3>
+          <p class="text-secondary-600 text-sm mb-4">Python 3.7+ support</p>
+          <Button variant="ghost" size="sm" href="https://pypi.org/project/nexwave">
+            pip install
+          </Button>
+        </div>
+        
+        <div class="card p-6 text-center animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">RB</span>
+          </div>
+          <h3 class="font-bold text-secondary-900 mb-2">Ruby</h3>
+          <p class="text-secondary-600 text-sm mb-4">Ruby 2.7+ support</p>
+          <Button variant="ghost" size="sm" href="https://rubygems.org/gems/nexwave">
+            gem install
+          </Button>
+        </div>
+        
+        <div class="card p-6 text-center animate-on-scroll">
+          <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">GO</span>
+          </div>
+          <h3 class="font-bold text-secondary-900 mb-2">Go</h3>
+          <p class="text-secondary-600 text-sm mb-4">Go 1.18+ support</p>
+          <Button variant="ghost" size="sm" href="https://pkg.go.dev/github.com/nexwave/go-sdk">
+            go get
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rate Limits & Status -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Rate Limits -->
+        <div class="animate-on-scroll">
+          <h2 class="text-3xl font-display font-bold text-secondary-900 mb-6">
+            Rate Limits
+          </h2>
+          <p class="text-secondary-600 mb-8 leading-relaxed">
+            Our API has generous rate limits to ensure reliable performance for all users.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="card p-6">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="font-semibold text-secondary-900">Free Tier</h4>
+                <span class="text-primary-600 font-bold">1,000/hour</span>
+              </div>
+              <p class="text-secondary-600 text-sm">Perfect for development and testing</p>
+            </div>
+            
+            <div class="card p-6">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="font-semibold text-secondary-900">Professional</h4>
+                <span class="text-primary-600 font-bold">10,000/hour</span>
+              </div>
+              <p class="text-secondary-600 text-sm">Ideal for production applications</p>
+            </div>
+            
+            <div class="card p-6">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="font-semibold text-secondary-900">Enterprise</h4>
+                <span class="text-primary-600 font-bold">Custom</span>
+              </div>
+              <p class="text-secondary-600 text-sm">Unlimited requests for large-scale usage</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- API Status -->
+        <div class="animate-on-scroll">
+          <h2 class="text-3xl font-display font-bold text-secondary-900 mb-6">
+            API Status
+          </h2>
+          <p class="text-secondary-600 mb-8 leading-relaxed">
+            Monitor real-time API performance and uptime statistics.
+          </p>
+          
+          <div class="card p-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="font-semibold text-secondary-900">Current Status</h4>
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span class="text-green-700 font-medium">Operational</span>
+              </div>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-secondary-600">Uptime (30 days)</span>
+                <span class="font-semibold text-secondary-900">99.98%</span>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-secondary-600">Avg Response Time</span>
+                <span class="font-semibold text-secondary-900">145ms</span>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-secondary-600">Requests/minute</span>
+                <span class="font-semibold text-secondary-900">2.4k</span>
+              </div>
+            </div>
+          </div>
+          
+          <Button variant="secondary" href="https://status.nexwave.com" class="w-full">
+            View Status Page
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-gradient-to-r from-primary-600 to-accent-600">
+    <div class="container-custom text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-display font-bold text-white mb-6 animate-on-scroll">
+          Ready to Start Building?
+        </h2>
+        <p class="text-xl text-primary-100 mb-8 animate-on-scroll">
+          Get your API key and start integrating NexWave into your applications today.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-on-scroll">
+          <Button variant="secondary" size="lg" href="/signup">
+            Get API Key
+          </Button>
+          <Button variant="ghost" size="lg" href="/contact" class="text-white hover:bg-white/10">
+            Talk to Developers
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
