@@ -1,0 +1,19 @@
+---
+export interface Props {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const { icon, title, description } = Astro.props;
+---
+
+<div class="card p-6 h-full animate-on-scroll">
+  <div class="flex items-center space-x-3 mb-4">
+    <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
+      <div class="text-white text-lg" set:html={icon}></div>
+    </div>
+    <h3 class="text-xl font-semibold text-secondary-900">{title}</h3>
+  </div>
+  <p class="text-secondary-600 leading-relaxed">{description}</p>
+</div>

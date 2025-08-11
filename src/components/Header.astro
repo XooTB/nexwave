@@ -1,0 +1,107 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-secondary-200 z-50 transition-all duration-300" id="header">
+  <div class="container-custom">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center space-x-2 group">
+          <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+            <span class="text-white font-bold text-lg">N</span>
+          </div>
+          <span class="text-xl font-display font-bold text-secondary-900">NexWave</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          Home
+        </a>
+        <a href="/features" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/features' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          Features
+        </a>
+        <a href="/pricing" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/pricing' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          Pricing
+        </a>
+        <a href="/about" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/about' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          About
+        </a>
+        <a href="/contact" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/contact' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          Contact
+        </a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="hidden md:flex items-center space-x-3">
+        <a href="/signin" class="text-sm font-medium text-secondary-600 hover:text-primary-600 transition-colors duration-200">
+          Sign In
+        </a>
+        <a href="/signup" class="btn-primary text-sm">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="md:hidden p-2 rounded-lg hover:bg-secondary-100 transition-colors duration-200" id="mobile-menu-button">
+        <svg class="w-5 h-5 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden border-t border-secondary-200 py-4 hidden" id="mobile-menu">
+      <div class="flex flex-col space-y-3">
+        <a href="/" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          Home
+        </a>
+        <a href="/features" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/features' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          Features
+        </a>
+        <a href="/pricing" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/pricing' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          Pricing
+        </a>
+        <a href="/about" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/about' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          About
+        </a>
+        <a href="/contact" class={`text-sm font-medium transition-colors duration-200 hover:text-primary-600 ${currentPath === '/contact' ? 'text-primary-600' : 'text-secondary-600'}`}>
+          Contact
+        </a>
+        <div class="flex flex-col space-y-2 pt-3 border-t border-secondary-200">
+          <a href="/signin" class="text-sm font-medium text-secondary-600 hover:text-primary-600 transition-colors duration-200">
+            Sign In
+          </a>
+          <a href="/signup" class="btn-primary text-sm">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Header scroll effect
+  const header = document.getElementById('header');
+  
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > 100) {
+      header?.classList.add('shadow-lg');
+    } else {
+      header?.classList.remove('shadow-lg');
+    }
+  });
+</script>

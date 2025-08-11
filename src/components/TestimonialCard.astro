@@ -1,0 +1,36 @@
+---
+export interface Props {
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  avatar?: string;
+}
+
+const { name, role, company, content, avatar } = Astro.props;
+---
+
+<div class="card p-8 animate-on-scroll">
+  <div class="mb-6">
+    <div class="flex text-accent-500 mb-4">
+      {[...Array(5)].map(() => (
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+        </svg>
+      ))}
+    </div>
+    <blockquote class="text-secondary-700 leading-relaxed text-lg italic">
+      "{content}"
+    </blockquote>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-semibold text-lg mr-4">
+      {avatar || name.charAt(0)}
+    </div>
+    <div>
+      <p class="font-semibold text-secondary-900">{name}</p>
+      <p class="text-secondary-600 text-sm">{role} at {company}</p>
+    </div>
+  </div>
+</div>

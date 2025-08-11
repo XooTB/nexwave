@@ -1,0 +1,403 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import Button from '@/components/Button.astro';
+import '@/styles/global.css';
+---
+
+<BaseLayout title="Pricing - NexWave AI Automation Platform" description="Choose the perfect plan for your business. Transparent pricing with no hidden fees and a 14-day free trial.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl sm:text-6xl font-display font-bold text-secondary-900 mb-6 animate-on-scroll">
+          Simple, Transparent
+          <span class="text-gradient">Pricing</span>
+        </h1>
+        <p class="text-xl text-secondary-600 mb-8 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+          Choose the plan that fits your business needs. No hidden fees, cancel anytime, and start with a 14-day free trial.
+        </p>
+        
+        <!-- Billing Toggle -->
+        <div class="flex items-center justify-center mb-8 animate-on-scroll">
+          <span class="text-sm font-medium mr-4 transition-colors duration-200" id="monthly-label">Monthly</span>
+          
+          <!-- Custom Toggle Switch -->
+          <div class="relative">
+            <input type="checkbox" id="billing-toggle" class="sr-only">
+            <label for="billing-toggle" class="block cursor-pointer">
+              <div class="toggle-bg w-14 h-7 bg-secondary-300 rounded-full shadow-inner transition-all duration-300 relative">
+                <div class="toggle-dot absolute left-1 top-1 w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 transform"></div>
+              </div>
+            </label>
+          </div>
+          
+          <span class="text-sm font-medium ml-4 transition-colors duration-200" id="annual-label">Annual</span>
+          <span class="ml-3 bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Save 20%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Starter Plan -->
+        <div class="card p-8 relative animate-on-scroll">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-secondary-900 mb-2">Starter</h3>
+            <p class="text-secondary-600 mb-6">Perfect for small teams getting started with automation</p>
+            
+            <div class="mb-6">
+              <span class="text-5xl font-bold text-secondary-900" id="starter-price">$29</span>
+              <span class="text-secondary-600">/month</span>
+            </div>
+            
+            <Button variant="secondary" class="w-full mb-4" href="/signup?plan=starter">
+              Start Free Trial
+            </Button>
+            <p class="text-sm text-secondary-500">14-day free trial included</p>
+          </div>
+          
+          <div class="border-t border-secondary-200 pt-8">
+            <h4 class="font-semibold text-secondary-900 mb-4">What's included:</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Up to 100 workflow executions/month
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                5 active workflows
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Basic integrations (50+ apps)
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Email support
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Basic analytics
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Community support
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Professional Plan -->
+        <div class="card p-8 relative animate-on-scroll border-primary-500 border-2 shadow-lg">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <span class="bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+          </div>
+          
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-secondary-900 mb-2">Professional</h3>
+            <p class="text-secondary-600 mb-6">Ideal for growing businesses and teams</p>
+            
+            <div class="mb-6">
+              <span class="text-5xl font-bold text-secondary-900" id="professional-price">$99</span>
+              <span class="text-secondary-600">/month</span>
+            </div>
+            
+            <Button variant="primary" class="w-full mb-4" href="/signup?plan=professional">
+              Start Free Trial
+            </Button>
+            <p class="text-sm text-secondary-500">14-day free trial included</p>
+          </div>
+          
+          <div class="border-t border-secondary-200 pt-8">
+            <h4 class="font-semibold text-secondary-900 mb-4">Everything in Starter, plus:</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Unlimited workflow executions
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Unlimited active workflows
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Advanced integrations (500+ apps)
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Priority support (24/7)
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Advanced analytics & reporting
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Team collaboration features
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                API access
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Custom functions
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="card p-8 relative animate-on-scroll">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-secondary-900 mb-2">Enterprise</h3>
+            <p class="text-secondary-600 mb-6">For large organizations with complex needs</p>
+            
+            <div class="mb-6">
+              <span class="text-5xl font-bold text-secondary-900">Custom</span>
+            </div>
+            
+            <Button variant="accent" class="w-full mb-4" href="/contact?plan=enterprise">
+              Contact Sales
+            </Button>
+            <p class="text-sm text-secondary-500">Custom pricing available</p>
+          </div>
+          
+          <div class="border-t border-secondary-200 pt-8">
+            <h4 class="font-semibold text-secondary-900 mb-4">Everything in Professional, plus:</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Dedicated account manager
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Custom integrations & development
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                SLA guarantee (99.9% uptime)
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Advanced security & compliance
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                On-premise deployment options
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Training & onboarding
+              </li>
+              <li class="flex items-center text-secondary-700">
+                <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Volume discounts available
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding bg-secondary-50">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-display font-bold text-secondary-900 mb-4 animate-on-scroll">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-xl text-secondary-600 animate-on-scroll">
+          Got questions? We've got answers.
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-6">
+          <div class="card p-6 animate-on-scroll">
+            <h3 class="text-lg font-semibold text-secondary-900 mb-3">What's included in the free trial?</h3>
+            <p class="text-secondary-600 leading-relaxed">
+              Your 14-day free trial includes full access to all Professional plan features. No credit card required, and you can cancel anytime during the trial period with no charges.
+            </p>
+          </div>
+          
+          <div class="card p-6 animate-on-scroll">
+            <h3 class="text-lg font-semibold text-secondary-900 mb-3">Can I change my plan later?</h3>
+            <p class="text-secondary-600 leading-relaxed">
+              Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the billing accordingly.
+            </p>
+          </div>
+          
+          <div class="card p-6 animate-on-scroll">
+            <h3 class="text-lg font-semibold text-secondary-900 mb-3">What payment methods do you accept?</h3>
+            <p class="text-secondary-600 leading-relaxed">
+              We accept all major credit cards (Visa, MasterCard, American Express) and PayPal. Enterprise customers can also pay by wire transfer or check.
+            </p>
+          </div>
+          
+          <div class="card p-6 animate-on-scroll">
+            <h3 class="text-lg font-semibold text-secondary-900 mb-3">Is there a setup fee?</h3>
+            <p class="text-secondary-600 leading-relaxed">
+              No setup fees for any plan. We believe in transparent pricing with no hidden costs. What you see is what you pay.
+            </p>
+          </div>
+          
+          <div class="card p-6 animate-on-scroll">
+            <h3 class="text-lg font-semibold text-secondary-900 mb-3">Do you offer discounts for non-profits?</h3>
+            <p class="text-secondary-600 leading-relaxed">
+              Yes! We offer special pricing for qualified non-profit organizations and educational institutions. Contact our sales team for more information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-gradient-to-r from-primary-600 to-accent-600">
+    <div class="container-custom text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-display font-bold text-white mb-6 animate-on-scroll">
+          Ready to Get Started?
+        </h2>
+        <p class="text-xl text-primary-100 mb-8 animate-on-scroll">
+          Join thousands of companies using NexWave to automate their operations. Start your free trial today.
+        </p>
+        <Button variant="secondary" size="lg" href="/signup" class="animate-on-scroll">
+          Start Free Trial - No Credit Card Required
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* Custom toggle switch styles */
+  #billing-toggle:checked + label .toggle-bg {
+    @apply bg-primary-600;
+  }
+  
+  #billing-toggle:checked + label .toggle-dot {
+    transform: translateX(1.75rem);
+  }
+  
+  .toggle-bg:hover {
+    @apply bg-secondary-400;
+  }
+  
+  #billing-toggle:checked + label .toggle-bg:hover {
+    @apply bg-primary-700;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Elements
+    const toggle = document.getElementById('billing-toggle') as HTMLInputElement;
+    const starterPrice = document.getElementById('starter-price');
+    const professionalPrice = document.getElementById('professional-price');
+    const monthlyLabel = document.getElementById('monthly-label');
+    const annualLabel = document.getElementById('annual-label');
+    
+    // Prices
+    const prices = {
+      monthly: { starter: 29, professional: 99 },
+      annual: { starter: 23, professional: 79 }
+    };
+    
+    // Update function
+    function updatePricing() {
+      const isAnnual = toggle.checked;
+      const currentPrices = isAnnual ? prices.annual : prices.monthly;
+      
+      // Update prices
+      if (starterPrice) {
+        starterPrice.textContent = `$${currentPrices.starter}`;
+      }
+      if (professionalPrice) {
+        professionalPrice.textContent = `$${currentPrices.professional}`;
+      }
+      
+      // Update labels
+      if (monthlyLabel && annualLabel) {
+        if (isAnnual) {
+          monthlyLabel.className = 'text-sm font-medium mr-4 transition-colors duration-200 text-secondary-500';
+          annualLabel.className = 'text-sm font-medium ml-4 transition-colors duration-200 text-primary-600 font-semibold';
+        } else {
+          monthlyLabel.className = 'text-sm font-medium mr-4 transition-colors duration-200 text-primary-600 font-semibold';
+          annualLabel.className = 'text-sm font-medium ml-4 transition-colors duration-200 text-secondary-500';
+        }
+      }
+    }
+    
+    // Initialize
+    toggle.checked = false;
+    updatePricing();
+    
+    // Event listener
+    toggle.addEventListener('change', updatePricing);
+    
+    // Also listen for clicks on labels for better UX
+    monthlyLabel?.addEventListener('click', () => {
+      toggle.checked = false;
+      updatePricing();
+    });
+    
+    annualLabel?.addEventListener('click', () => {
+      toggle.checked = true;
+      updatePricing();
+    });
+  });
+</script>
