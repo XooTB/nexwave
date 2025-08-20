@@ -5,6 +5,7 @@ import Footer from '@/components/Footer.astro';
 import Button from '@/components/Button.astro';
 import FeatureCard from '@/components/FeatureCard.astro';
 import '@/styles/global.css';
+import { Bot, Palette, Zap, BarChart3, RotateCcw, Target, Check, Lock, Shield, Key, BarChart, AlertTriangle, Rocket, Radio, Wrench, BookOpen, Search, TrendingUp, Slack, Github, Mail, Database, Cloud, MessageSquare, Calendar, FileText, ShoppingCart, CreditCard, Users, Settings, Smartphone, Globe, Zap as ZapIcon, Link } from 'lucide-astro';
 ---
 
 <BaseLayout title="Features - NexWave AI Automation Platform" description="Discover all the powerful features that make NexWave the leading AI automation platform for modern businesses.">
@@ -42,32 +43,32 @@ import '@/styles/global.css';
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <FeatureCard
-          icon="🤖"
+          icon={Bot}
           title="AI-Powered Workflows"
           description="Create intelligent workflows that adapt and learn from your business patterns, making smarter decisions over time."
         />
         <FeatureCard
-          icon="🎨"
+          icon={Palette}
           title="Visual Workflow Builder"
           description="Design complex automation with our intuitive drag-and-drop interface. No coding knowledge required."
         />
         <FeatureCard
-          icon="⚡"
+          icon={Zap}
           title="Real-time Processing"
           description="Process data and trigger actions instantly with our high-performance automation engine."
         />
         <FeatureCard
-          icon="📊"
+          icon={BarChart3}
           title="Advanced Analytics"
           description="Get deep insights into your automation performance with comprehensive reporting and analytics."
         />
         <FeatureCard
-          icon="🔄"
+          icon={RotateCcw}
           title="Smart Triggers"
           description="Set up intelligent triggers based on events, schedules, data changes, or external API calls."
         />
         <FeatureCard
-          icon="🎯"
+          icon={Target}
           title="Error Handling"
           description="Robust error handling and recovery mechanisms ensure your workflows run smoothly 24/7."
         />
@@ -90,33 +91,25 @@ import '@/styles/global.css';
           <div class="space-y-4 mb-8">
             <div class="flex items-center space-x-3">
               <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
+                <Check class="w-4 h-4 text-white" />
               </div>
               <span class="text-secondary-700">CRM platforms (Salesforce, HubSpot, Pipedrive)</span>
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
+                <Check class="w-4 h-4 text-white" />
               </div>
               <span class="text-secondary-700">Communication tools (Slack, Teams, Discord)</span>
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
+                <Check class="w-4 h-4 text-white" />
               </div>
               <span class="text-secondary-700">Cloud storage (Google Drive, Dropbox, OneDrive)</span>
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
+                <Check class="w-4 h-4 text-white" />
               </div>
               <span class="text-secondary-700">E-commerce platforms (Shopify, WooCommerce)</span>
             </div>
@@ -129,11 +122,61 @@ import '@/styles/global.css';
         
         <div class="animate-on-scroll">
           <div class="grid grid-cols-4 gap-4">
-            {[...Array(16)].map(() => (
-              <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16">
-                <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg"></div>
-              </div>
-            ))}
+            <!-- Row 1 -->
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Slack class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Github class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Mail class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Database class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Cloud class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <MessageSquare class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Calendar class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <FileText class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <ShoppingCart class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <CreditCard class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Users class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Settings class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            
+            <!-- Row 4 -->
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Smartphone class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Globe class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <ZapIcon class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-secondary-200 flex items-center justify-center h-16 hover:shadow-md transition-shadow group">
+              <Link class="w-8 h-8 text-secondary-600 group-hover:text-primary-600 transition-colors" />
+            </div>
           </div>
         </div>
       </div>
@@ -148,9 +191,7 @@ import '@/styles/global.css';
           <div class="bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl p-8 text-white">
             <div class="mb-8">
               <div class="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                </svg>
+                <Lock class="w-8 h-8 text-white" />
               </div>
               <h3 class="text-2xl font-bold mb-2">Bank-Grade Security</h3>
               <p class="text-primary-100">Your data is protected with enterprise-level security measures.</p>
@@ -188,9 +229,7 @@ import '@/styles/global.css';
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div class="card p-6">
               <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
+                <Shield class="w-5 h-5 text-white" />
               </div>
               <h3 class="font-semibold text-secondary-900 mb-2">Data Protection</h3>
               <p class="text-secondary-600 text-sm">End-to-end encryption for data in transit and at rest.</p>
@@ -198,9 +237,7 @@ import '@/styles/global.css';
             
             <div class="card p-6">
               <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
-                </svg>
+                <Key class="w-5 h-5 text-white" />
               </div>
               <h3 class="font-semibold text-secondary-900 mb-2">Access Control</h3>
               <p class="text-secondary-600 text-sm">Role-based permissions and SSO integration.</p>
@@ -208,9 +245,7 @@ import '@/styles/global.css';
             
             <div class="card p-6">
               <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                </svg>
+                <BarChart class="w-5 h-5 text-white" />
               </div>
               <h3 class="font-semibold text-secondary-900 mb-2">Audit Logs</h3>
               <p class="text-secondary-600 text-sm">Comprehensive activity tracking and monitoring.</p>
@@ -218,9 +253,7 @@ import '@/styles/global.css';
             
             <div class="card p-6">
               <div class="w-10 h-10 bg-gradient-to-br from-red-500 to-rose-500 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-                </svg>
+                <AlertTriangle class="w-5 h-5 text-white" />
               </div>
               <h3 class="font-semibold text-secondary-900 mb-2">Threat Detection</h3>
               <p class="text-secondary-600 text-sm">AI-powered anomaly detection and alerting.</p>
@@ -245,32 +278,32 @@ import '@/styles/global.css';
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <FeatureCard
-          icon="🚀"
+          icon={Rocket}
           title="RESTful API"
           description="Comprehensive REST API with detailed documentation, SDKs, and code examples for seamless integration."
         />
         <FeatureCard
-          icon="📡"
+          icon={Radio}
           title="Webhooks"
           description="Real-time event notifications to keep your systems synchronized with workflow executions."
         />
         <FeatureCard
-          icon="🔧"
+          icon={Wrench}
           title="Custom Functions"
           description="Write custom JavaScript functions to extend automation capabilities beyond standard actions."
         />
         <FeatureCard
-          icon="📚"
+          icon={BookOpen}
           title="SDK Libraries"
           description="Official SDKs for popular programming languages including Python, Node.js, and Go."
         />
         <FeatureCard
-          icon="🔍"
+          icon={Search}
           title="Testing Tools"
           description="Built-in testing and debugging tools to validate workflows before deployment."
         />
         <FeatureCard
-          icon="📊"
+          icon={TrendingUp}
           title="API Analytics"
           description="Monitor API usage, performance metrics, and integration health with detailed dashboards."
         />

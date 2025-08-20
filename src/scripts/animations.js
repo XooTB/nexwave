@@ -8,8 +8,10 @@ export class NexWaveAnimations {
     this.setupScrollAnimations();
     this.setupParallaxEffects();
     this.setupCounterAnimations();
+    this.setupProgressBars();
     this.setupTypewriterEffect();
     this.setupSmoothScroll();
+    this.setupFloatingElements();
   }
 
   // Intersection Observer for scroll animations
@@ -76,27 +78,59 @@ export class NexWaveAnimations {
       const updateCounter = () => {
         const target = parseInt(counter.getAttribute('data-target'));
         const count = parseInt(counter.innerText.replace(/[^0-9]/g, ''));
-        const increment = target / 100;
+        const increment = target / 60; // Slower animation
 
         if (count < target) {
           const newCount = Math.ceil(count + increment);
-          counter.innerText = this.formatNumber(newCount);
-          setTimeout(updateCounter, 20);
+          const suffix = target === 48 ? 'h' : target === 34 ? '%' : '';
+          counter.innerText = newCount + suffix;
+          setTimeout(updateCounter, 30);
         } else {
-          counter.innerText = this.formatNumber(target);
+          const suffix = target === 48 ? 'h' : target === 34 ? '%' : '';
+          counter.innerText = target + suffix;
         }
       };
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            updateCounter();
+            setTimeout(updateCounter, 500); // Delay start
             observer.unobserve(entry.target);
           }
         });
       });
 
       observer.observe(counter);
+    });
+  }
+
+  // Progress bar animations
+  setupProgressBars() {
+    const progressBars = document.querySelectorAll('.progress-bar');
+    
+    progressBars.forEach((bar) => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const width = bar.getAttribute('data-width');
+            setTimeout(() => {
+              bar.style.width = width + '%';
+            }, 300);
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      observer.observe(bar);
+    });
+  }
+
+  // Floating elements animation
+  setupFloatingElements() {
+    const floatingElements = document.querySelectorAll('.animate-float');
+    
+    floatingElements.forEach((element, index) => {
+      element.style.animationDelay = `${index * 0.5}s`;
     });
   }
 
